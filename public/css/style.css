@@ -1,0 +1,434 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #3d3d3d;
+    color: #3b2f2f;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.container {
+    width: 1200px;
+    background-color: #F9FAF9; 
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #1F3A5F; 
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #5a4635;
+    padding: 0rem 2rem;
+}
+
+header .logo img {
+    height: 40px; /* Adjust logo height */
+}
+
+header nav {
+    display: flex;       /* Wajib Flexbox agar isinya sejajar */
+    align-items: center; /* Tengah secara vertikal */
+    gap: 1.5rem;         /* Jarak antar menu */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-section {
+    flex: 2;
+}
+
+.cart-section {
+    flex: 1;
+    background-color: #E0E0E0;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color:#2C3E50;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Product Cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.product-card, .product-card-simple {
+    background-color: #E0E0E0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.product-card img, .product-card-simple img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3, .product-card-simple h3 {
+    font-size: 1.5rem;
+    color: #2C3E50;
+}
+
+.product-card .price, .product-card-simple .price {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.addon-options button {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #2C3E50;
+    background-color: #F9FAF9;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #5a4635;
+}
+
+.addon-options button:hover {
+    background-color: #2e5c9e;
+}
+
+.btn-tambah {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2C3E50;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-tambah:hover {
+    background-color: #2e5c9e;
+}
+
+
+/* Cart Section */
+.cart-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    color: #2C3E50;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-item-details .item-name {
+    font-weight: bold;
+    color: #2C3E50;
+}
+.cart-item-details .item-addon {
+    font-size: 0.8rem;
+    color: #2C3E50;
+}
+
+.quantity-adjuster {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-adjuster button {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #2C3E50;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cart-total {
+    border-top: 2px solid #2C3E50;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+.total-row, .tunai-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.tunai-row input {
+    border: 1px solid #2C3E50;
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 120px;
+    text-align: right;
+    font-size: 1rem;
+}
+
+.btn-bayar {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2C3E50;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-bayar:hover {
+    background-color: #2e5c9e;
+}
+
+/* === STYLING UNTUK HALAMAN STOK === */
+.stock-container {
+    width: 100%;
+}
+
+.stock-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stock-card {
+    background-color: #1F3A5F; /* Coklat dari desain */
+    color: #f5f0e1; /* Beige dari desain */
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.stock-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.stock-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.stock-info h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f5f0e1;
+}
+
+.stock-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stock-controls span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.stock-controls button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #f5f0e1;
+    background-color: transparent;
+    color: #f5f0e1;
+    border-radius: 50%; /* Membuat tombol menjadi bulat */
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    padding-bottom: 5px; /* Adjust vertical alignment */
+    transition: background-color 0.2s;
+}
+
+.stock-controls button:hover {
+    background-color: #5a4635;
+}
+
+/* Tombol QR */
+.btn-qr {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.75rem; /* Jarak dari tombol Bayar */
+    border: 2px solid #5a4635;
+    border-radius: 8px;
+    background-color: #f5f0e1; /* Warna latar beige */
+    color: #5a4635; /* Warna teks coklat */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.btn-qr:hover {
+    background-color: #e6dac8;
+}
+
+/* Modal untuk menampilkan QR */
+.qr-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.qr-modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.qr-modal-content img {
+    width: 300px; /* Sesuaikan ukuran QR */
+    height: 300px;
+}
+
+/* CSS untuk info stok di menu */
+.stock-info {
+    font-size: 0.9rem; /* Sedikit lebih kecil dari harga */
+    color: #888; /* Warna abu-abu agar tidak terlalu mencolok */
+    margin-bottom: 1rem; /* Jarak ke tombol di bawahnya */
+    margin-top: -0.5rem; /* Kurangi jarak dari harga */
+}
+
+.stock-info.low-stock {
+    color: #d9534f; /* Warna merah */
+    font-weight: bold;
+}
+
+.btn-bayar-non {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem; /* Jarak dikit dari tombol Tunai */
+    border: none;
+    border-radius: 8px;
+    background-color: #5a4635; /* Warna Biru agar beda */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-bayar-non:hover {
+    background-color: #2e5c9e;
+}
+
+.logout-form {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Agar tombol di dalamnya ikut alur flex */
+}
+
+.btn-logout {
+    background: none; /* Hilangkan background abu-abu default */
+    border: none;     /* Hilangkan border kotak default */
+    color: #d9534f;   /* Warna Merah agar terlihat sebagai aksi 'keluar' */
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif; /* Pastikan font sama dengan menu lain */
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+/* Efek saat mouse diarahkan ke tombol Keluar */
+.btn-logout:hover {
+    color: #c9302c; /* Merah lebih gelap saat hover */
+}
+
+/* CSS untuk tombol yang sedang Disabled (Tidak Aktif) */
+button:disabled {
+    background-color: #cccccc !important; /* Warna abu-abu */
+    color: #666666 !important; /* Warna teks abu gelap */
+    cursor: not-allowed; /* Kursor berubah jadi tanda larangan */
+    opacity: 0.6; /* Sedikit transparan */
+    pointer-events: none; /* Mencegah klik sepenuhnya */
+    border: 1px solid #999 !important;
+}
+
+/* Tombol Opsi Pembayaran */
+.btn-option {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #2C3E50;
+    background-color: #2C3E50;
+    color: #F9FAF9;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+/* Jika tombol dipilih (Active) */
+.btn-option.active {
+    background-color: #2ECC71;
+    color: #2C3E50;
+}
+
+.btn-option:hover {
+    background-color: #2e5c9e;
+}
